@@ -12,8 +12,8 @@
         }
 
         public Guid Id { get; init; }
-        public string Descricao { get; private set; }
-        public string Titulo { get; private set; }
+        public string? Descricao { get; private set; }
+        public string? Titulo { get; private set; }
         public Boolean Ativo { get; private set; }
 
         public void MudaTitulo(string titulo)

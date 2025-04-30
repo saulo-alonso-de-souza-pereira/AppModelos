@@ -27,11 +27,9 @@ namespace AppModelos.Migrations
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("Descricao")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Titulo")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");

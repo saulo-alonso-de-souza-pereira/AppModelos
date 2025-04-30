@@ -1,4 +1,4 @@
 ﻿namespace AppModelos.Models
 {
-    public record ModeloRequest(string titulo, string descricao);
+    public record ModeloRequest(string? titulo, string? descricao);
 }
