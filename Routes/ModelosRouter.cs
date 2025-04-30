@@ -36,14 +36,11 @@ namespace AppModelos.Routes
                 if (modelo == null)
                     return Results.NotFound();
 
-                //if (req.titulo != null)
-                //    modelo.MudaTitulo(req.titulo);
+                if (!string.IsNullOrEmpty(req.titulo))
+                    modelo.MudaTitulo(req.titulo);
 
-                //if (req.descricao != null)
-                //    modelo.MudaDescricao(req.descricao);
-
-                modelo.MudaDescricao(req.descricao ?? modelo.Descricao);
-                modelo.MudaTitulo(req.titulo ?? modelo.Titulo);
+                if (!string.IsNullOrEmpty(req.descricao))
+                    modelo.MudaDescricao(req.descricao);
 
                 await context.SaveChangesAsync();
 
